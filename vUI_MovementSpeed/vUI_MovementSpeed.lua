@@ -33,4 +33,4 @@ local OnDisable = function(self)
 end
 
 vUI:AddDataText(STAT_MOVEMENT_SPEED, OnEnable, OnDisable, Update)
-vUI:NewPlugin("vUI_SpeedDataText")
+vUI:NewPlugin("vUI_MovementSpeed")
