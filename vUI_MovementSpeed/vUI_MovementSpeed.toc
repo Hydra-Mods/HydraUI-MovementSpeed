@@ -1,6 +1,6 @@
-## Interface: 90001
+## Interface: 90002
 ## Author: Hydra
-## Version: 1.02
+## Version: 1.03
 ## Title: |cFFFFC44DvUI|r Movement Speed
 ## Notes: Create a Data Text to display movement speed
 ## RequiredDeps: vUI
