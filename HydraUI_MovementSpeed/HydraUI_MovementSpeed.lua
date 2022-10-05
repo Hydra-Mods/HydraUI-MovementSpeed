@@ -1,20 +1,21 @@
-if (not vUIGlobal) then
+if (not HydraUIGlobal) then
 	return
 end
 
-local vUI, GUI, Language, Assets, Settings = vUIGlobal:get()
-
+local HydraUI, Language, Assets, Settings = HydraUIGlobal:get()
 local GetUnitSpeed = GetUnitSpeed
 local STAT_SPEED = STAT_SPEED
 
 local OnMouseUp = function()
+	if InCombatLockdown() then
+		return print(ERR_NOT_IN_COMBAT)
+	end
+	
 	ToggleCharacter("PaperDollFrame")
 end
 
 local Update = function(self)
-	local Speed = GetUnitSpeed("player") / 7 * 100
-	
-	self.Text:SetFormattedText("|cFF%s%s:|r |cFF%s%.0f%%|r", Settings["data-text-label-color"], STAT_SPEED, Settings["data-text-value-color"], Speed)
+	self.Text:SetFormattedText("|cFF%s%s:|r |cFF%s%.0f%%|r", Settings["data-text-label-color"], STAT_SPEED, Settings["data-text-value-color"], GetUnitSpeed("player") / 7 * 100)
 end
 
 local OnEnable = function(self)
@@ -30,5 +31,5 @@ local OnDisable = function(self)
 	self.Text:SetText("")
 end
 
-vUI:AddDataText(STAT_MOVEMENT_SPEED, OnEnable, OnDisable, Update)
-vUI:NewPlugin("vUI_MovementSpeed")
+HydraUI:AddDataText(STAT_MOVEMENT_SPEED, OnEnable, OnDisable, Update)
+HydraUI:NewPlugin("HydraUI_MovementSpeed")

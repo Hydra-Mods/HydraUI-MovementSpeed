@@ -1,8 +1,0 @@
-## Interface: 90005
-## Author: Hydra
-## Version: 1.04
-## Title: |cFFFFC44DvUI|r Movement Speed
-## Notes: Create a Data Text to display movement speed
-## RequiredDeps: vUI
-
-vUI_MovementSpeed.lua
