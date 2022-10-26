@@ -10,12 +10,12 @@ local OnMouseUp = function()
 	if InCombatLockdown() then
 		return print(ERR_NOT_IN_COMBAT)
 	end
-	
+
 	ToggleCharacter("PaperDollFrame")
 end
 
 local Update = function(self)
-	self.Text:SetFormattedText("|cFF%s%s:|r |cFF%s%.0f%%|r", Settings["data-text-label-color"], STAT_SPEED, Settings["data-text-value-color"], GetUnitSpeed("player") / 7 * 100)
+	self.Text:SetFormattedText("|cFF%s%s:|r |cFF%s%.0f%%|r", Settings["data-text-label-color"], STAT_SPEED, HydraUI.ValueColor, GetUnitSpeed("player") / 7 * 100)
 end
 
 local OnEnable = function(self)
