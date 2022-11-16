@@ -19,7 +19,6 @@ local Update = function(self)
 end
 
 local OnEnable = function(self)
-	self:RegisterUnitEvent("UNIT_STATS", "player")
 	self:SetScript("OnUpdate", Update)
 	self:SetScript("OnMouseUp", OnMouseUp)
 	self:Update()

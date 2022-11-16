@@ -1,6 +1,6 @@
 ## Interface: 30400
 ## Author: Hydra
-## Version: 1.18
+## Version: 1.19
 ## Title: |cFFFFC44DHydra|r|cFFFFFFFFUI Movement Speed|r
 ## Notes: Create a data text to display movement speed
 ## RequiredDeps: HydraUI
